@@ -104,12 +104,20 @@ header {
 	width: 0;
 	height: 100%;
 	overflow: hidden;
-	background: url(../img/img-modified.jpg) no-repeat left top;
-	background-size: auto 100%;
 	/* Force Hardware Acceleration in WebKit */
 	@include transform(translateZ(0));
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+
+	img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		height: 100%;
+		width: auto;
+		max-width: none;
+	}
 
 	.cd-image-label {
 		right: auto;

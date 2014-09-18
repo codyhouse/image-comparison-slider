@@ -102,8 +102,6 @@ header h1 {
   width: 0;
   height: 100%;
   overflow: hidden;
-  background: url(../img/img-modified.jpg) no-repeat left top;
-  background-size: auto 100%;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -112,6 +110,15 @@ header h1 {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.cd-resize-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
 }
 .cd-resize-img .cd-image-label {
   right: auto;

@@ -7,21 +7,28 @@ jQuery(document).ready(function($){
     });
     
     //make the .cd-handle element draggable and modify .cd-resize-img width according to its position
-    drags($('.cd-handle'), $('.cd-resize-img'), $('.cd-image-container'), $('.cd-image-label[data-type="original"]'), $('.cd-image-label[data-type="modified"]'));
+    $('.cd-image-container').each(function(){
+        var actual = $(this);
+        drags(actual.find('.cd-handle'), actual.find('.cd-resize-img'), actual, actual.find('.cd-image-label[data-type="original"]'), actual.find('.cd-image-label[data-type="modified"]'));
+    });
 
     //upadate images label visibility
     $(window).on('resize', function(){
-        updateLabel($('.cd-image-label[data-type="modified"]'), $('.cd-resize-img'), 'left');
-        updateLabel($('.cd-image-label[data-type="original"]'), $('.cd-resize-img'), 'right');
+        $('.cd-image-container').each(function(){
+            var actual = $(this);
+            updateLabel(actual.find('.cd-image-label[data-type="modified"]'), actual.find('.cd-resize-img'), 'left');
+            updateLabel(actual.find('.cd-image-label[data-type="original"]'), actual.find('.cd-resize-img'), 'right');
+        });
     });
 });
 
 function checkPosition(container) {
-    if( $(window).scrollTop() + $(window).height()*0.5 > container.offset().top) {
-        container.addClass('is-visible');
-        //you can uncomment the following line if you don't have other events to bind to the window scroll
-        // $(window).off('scroll');
-    }
+    container.each(function(){
+        var actualContainer = $(this);
+        if( $(window).scrollTop() + $(window).height()*0.5 > actualContainer.offset().top) {
+            actualContainer.addClass('is-visible');
+        }
+    });
 }
 
 //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
