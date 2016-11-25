@@ -1,0 +1,25 @@
+{
+  "name": "image-comparison-slider",
+  "homepage": "https://github.com/CodyHouse/image-comparison-slider",
+  "authors": [
+    "Claudia Romano <claudia.romano06@gmail.com>"
+  ],
+  "description": "Image comparision between two photos visualized with a slider",
+  "main": "index.html",
+  "keywords": [
+    "image",
+    "comparison",
+    "slider"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
