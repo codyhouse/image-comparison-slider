@@ -200,3 +200,6 @@ header h1 {
   -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
   transition: transform 0.3s 0.7s, opacity 0s 0.7s;
 }
+.cd-drop-zone-hover {
+  filter: brightness(0.4);
+}
