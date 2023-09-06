@@ -12,8 +12,8 @@ Primary style
 body {
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
-  color: #445b7c;
-  background-color: #445b7c;
+  color: #37AB56;
+  background-color: #37AB56;
 }
 
 a {
@@ -58,7 +58,7 @@ header h1 {
 .cd-image-container {
   position: relative;
   width: 90%;
-  max-width: 768px;
+
   margin: 0em auto;
 }
 .cd-image-container img {
@@ -69,7 +69,7 @@ header h1 {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: #ffffff;
+  color: #000000;
   padding: 1em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
